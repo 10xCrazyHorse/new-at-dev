@@ -1,0 +1,42 @@
+{
+  "name": "new-at-dev",
+  "version": "1.0.0",
+  "description": "feed generator for atproto starter demo statusphere app",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "start": "ts-node src/index.ts",
+    "publishFeed": "ts-node scripts/publishFeedGen.ts",
+    "unpublishFeed": "ts-node scripts/unpublishFeedGen.ts"
+  },
+  "keywords": ["atproto", "statusphere", "feed", "generator"],
+  "author": "10xcrazyhorse",
+  "license": "MIT",
+  "dependencies": {
+    "@atproto/api": "^0.14.14",
+    "@atproto/identity": "^0.4.6",
+    "@atproto/sync": "^0.1.18",
+    "@biomejs/biome": "^1.9.4",
+    "better-sqlite3": "^11.9.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "kysely": "^0.27.6",
+    "pino": "^9.6.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "inquirer": "^12.3.0",
+    "pino-pretty": "^13.0.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">= 18"
+  }
+}
